@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея - мой первый сайт</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="gallery-header">
+        <div class="header-content">
+            <h1><i class="fas fa-images"></i> Фотогалерея</h1>
+                <p class="subtitle">Коллекция изображений по теме: <span class="theme-name">Космос</span></p>
+        </div>
+
+        <nav class="main-nav">
+            <ul class="nav-grid">
+                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i>Главная</a></li>
+                <li><a href="gallery.html" class="nav-link active"><i class="fas fa-camera"></i>Галерея</a></li>
+                <li><a href="contacts.html" class="nav-link"><i class="fas fa-list"></i>Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="gallery-container">
+        <div class="controls-panel">
+            <div class="stats">
+                <span class="stat-item">
+                    <i class="fas fa-image"></i>
+                    Изображений:<span id="image-counter">0</span>
+                </span>
+                <span class="stat-item">
+                    <i class="fas fa-heart"></i>
+                    Всего лайков:<span id="total-likes">0</span>
+                </span>
+            </div>
+        </div>
+
+    <div class="gallery-filters">
+        <h3><i class="fas fa-filter"></i>Фильтры:</h3>    
+            <button class="filter-btn active" data-filter="all">Все</button>
+            <button class="filter-btn" data-filter="planets">Планеты</button>
+            <button class="filter-btn" data-filter="nebulae">Туманности</button>
+            <button class="filter-btn" data-filter="galaxies">Галактики</button>
+    </div>
+
+        <div class="gallery-grid" id="image-gallery">
+            <article class="image-card" data-category="planets">
+                <div class="card-image">
+                    <img src="images/солнечная система.webp" alt="Solar system" class="gallery-img" loading="lazy">
+                    <div class="image-overlay">
+                          <button class="like-btn" data-id="1">
+                            <i class="far fa-heart"></i>
+                            <span class="like-count">0</span>
+                          </button>
+                          <button class="zoom-btn">
+                            <i class="fas fa-expand"></i>
+                          </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Солнечная система</h3>
+                        <p class="image-date"><i class="far fa-calendar"></i>5 февраля 2026</p>
+                        <p class="image-description">8 планет Солнечной системы по порядку.</р>
+                    <div class="image-tags">
+                        <span class="tag">Планеты</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="image-card" data-category="nebulae">
+                <div class="card-image">
+                    <img src="images/фиол туманность.jpg" alt="Туманность" class="gallery-img" loading="lazy">
+                    <div class="image-overlay">
+                          <button class="like-btn" data-id="2">
+                            <i class="far fa-heart"></i>
+                            <span class="like-count">0</span>
+                          </button>
+                          <button class="zoom-btn">
+                            <i class="fas fa-expand"></i>
+                          </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Туманность Лагуна</h3>
+                        <p class="image-date"><i class="far fa-calendar"></i>5 февраля 2026</p>
+                        <p class="image-description">Это гигантское межзвездное облако и область активного звездообразования, расположенная в созвездии Стрельца.</р>
+                    <div class="image-tags">
+                        <span class="tag">Туманности</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="image-card" data-category="galaxies">
+                <div class="card-image">
+                    <img src="images/млеч путь.jpg" alt="Галактика со множеством звезд вокруг" class="gallery-img" loading="lazy">
+                    <div class="image-overlay">
+                          <button class="like-btn" data-id="3">
+                            <i class="far fa-heart"></i>
+                            <span class="like-count">0</span>
+                          </button>
+                          <button class="zoom-btn">
+                            <i class="fas fa-expand"></i>
+                          </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Млечный путь</h3>
+                        <p class="image-date"><i class="far fa-calendar"></i>5 февраля 2026</p>
+                        <p class="image-description">Галактика, в которой мы живем.</р>
+                    <div class="image-tags">
+                        <span class="tag">Галактики</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="image-card" data-category="galaxies">
+                <div class="card-image">
+                    <img src="images/андромеда.jpg" alt="Большая фиолетовая туманность" class="gallery-img" loading="lazy">
+                    <div class="image-overlay">
+                          <button class="like-btn" data-id="4">
+                            <i class="far fa-heart"></i>
+                            <span class="like-count">0</span>
+                          </button>
+                          <button class="zoom-btn">
+                            <i class="fas fa-expand"></i>
+                          </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Андромеда</h3>
+                        <p class="image-date"><i class="far fa-calendar"></i>5 февраля 2026</p>
+                        <p class="image-description">Ближайшая галактика к нашей галактике.</р>
+                    <div class="image-tags">
+                        <span class="tag">Галактики</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="image-card" data-category="nebulae">
+                <div class="card-image">
+                    <img src="images/красн туман.jpg" alt="Протяженная синяя туманность" class="gallery-img" loading="lazy">
+                    <div class="image-overlay">
+                          <button class="like-btn" data-id="5">
+                            <i class="far fa-heart"></i>
+                            <span class="like-count">0</span>
+                          </button>
+                          <button class="zoom-btn">
+                            <i class="fas fa-expand"></i>
+                          </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Тройная туманность</h3>
+                        <p class="image-date"><i class="far fa-calendar"></i>5 февраля 2026</p>
+                        <p class="image-description">Это удивительный космический объект, расположенный в созвездии Стрельца. Название «Тройная» предложено астрономом Уильямом Гершелем, так как темные полосы космической пыли визуально разделяют светящуюся туманность на три лепестка.</р>
+                    <div class="image-tags">
+                        <span class="tag">Туманности</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="image-card" data-category="planets">
+                <div class="card-image">
+                    <img src="images/траппист.jpg" alt="Несколько красивых планет на фоне туманностей" class="gallery-img" loading="lazy">
+                    <div class="image-overlay">
+                          <button class="like-btn" data-id="6">
+                            <i class="far fa-heart"></i>
+                            <span class="like-count">0</span>
+                          </button>
+                          <button class="zoom-btn">
+                            <i class="fas fa-expand"></i>
+                          </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Планетная система TRAPPIST-1</h3>
+                        <p class="image-date"><i class="far fa-calendar"></i>5 февраля 2026</p>
+                        <p class="image-description">Это реальная планетная система у ультрахолодного красного карлика в созвездии Водолея, расположенная примерно в 40 световых годах от нас. На картинке представлена художественная визуализация всех её семи планет, а Земля помещена в центр исключительно для наглядного сравнения их размеров.</р>
+                    <div class="image-tags">
+                        <span class="tag">Планеты</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <aside class="gallery-info">
+            <h3><i class="fas fa-lightbulb"></i>Интересный факт</h3>
+                <p>Свет от Солнца до Земли идёт 8 минут 20 секунд.</p>
+        </aside>
+    </main>
+
+    <footer class="gallery-footer">
+        <div class="footer-content">
+            <p><span id="current-year">2026, </span>Александр Алиев. Все права защищены.</p>
+            <p class="js-status">JavaScript загружен и работает!</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

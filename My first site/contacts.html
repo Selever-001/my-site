@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    <link rel="stylesheet" href="style.css">
+
+<style>
+
+.contact-container {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+    margin-top:20px;
+}
+
+.contact-card,
+.contact-form,
+.info-block {
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+    overflow:hidden;
+}
+
+.contact-card ul,
+.info-block ul {
+    list-style:none;
+    margin-left:0;
+}
+
+.contact-card li {
+    margin-bottom:15px;
+    padding:10px;
+    border-radius:8px;
+}
+
+.contact-card li:nth-child(even) {
+    background:#f2f7ff;
+}
+
+.contact-card li:nth-child(odd) {
+    background:#d9f6fa;
+}
+
+.contact-card li::before {
+    content:"🚀 ";
+}
+
+.social-links a {
+    display:inline-block;
+    margin:5px;
+    padding:8px 15px;
+    background:#174486;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.social-links a:hover {
+    background:#1dd7e1;
+    transform:translateY(-3px);
+}
+
+.contact-form {
+    margin-top:25px;
+}
+
+.form-group {
+    margin-bottom:20px;
+    position:relative;
+}
+
+.required-label::after {
+    content:" *";
+    color:red;
+    font-weight:bold;
+}
+
+input,
+textarea,
+select {
+    width:100%;
+    padding:12px;
+    border:2px solid #ccc;
+    border-radius:10px;
+    font-size:16px;
+    outline:none;
+    transition:0.3s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color:#174486;
+    box-shadow:0 0 8px rgba(23,68,134,0.4);
+}
+
+input:required,
+textarea:required {
+    border-left:4px solid #1dd7e1;
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-style:italic;
+    color:#888;
+}
+
+::selection {
+    background:#174486;
+    color:white;
+}
+
+.checkbox-container {
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+input[type="checkbox"] {
+    width:auto;
+}
+
+input[type="checkbox"]:checked {
+    transform:scale(1.2);
+}
+
+button {
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#174486;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover {
+    background:#1dd7e1;
+}
+
+.info-block {
+    margin-top:25px;
+}
+
+.info-block li {
+    padding:10px;
+}
+
+.info-block li::before {
+    content:"⭐ ";
+}
+
+@media(max-width:768px) {
+
+.contact-container{
+    grid-template-columns:1fr;
+}
+
+header h1 {
+    font-size:32px;
+}
+
+}
+
+@media(max-width:320px) {
+
+body {
+    padding:10px;
+}
+
+input,
+textarea,
+button {
+    font-size:14px;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+    <header>
+        <h1>Контакты</h1>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="gallery.html">Галерея</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+
+    </header>
+
+<main>
+    <div class="contact-container">
+        
+        <div>
+            <div class="contact-card">
+                <h2>Информация о разработчике</h2>
+
+                <ul>
+                    <li><strong>ФИО:</strong> Александр Алиев</li>
+
+                    <li><strong>Email:</strong> alexander@example.com</li>
+
+                    <li><strong>Специализация:</strong> Космос и астрономия</li>
+
+                    <li>
+                        <strong>Социальные сети:</strong>
+
+                        <div class="social-links">
+                            <a href="#">Telegram</a>
+                            <a href="#">WhatsApp</a>
+                            <a href="#">Instagram</a>
+                        </div>
+                    </li>
+
+                    <li><strong>Географическое положение:</strong> Москва, Россия</li>
+                </ul>
+            </div>
+
+            <div class="info-block">
+                <h2>Дополнительная информация</h2>
+
+                <h3>График доступности</h3>
+
+                <ul>
+                    <li>Понедельник — Пятница: 09:00–18:00</li>
+                    <li>Суббота: 10:00–15:00</li>
+                    <li>Воскресенье: выходной</li>
+                </ul>
+
+                <h3>FAQ</h3>
+
+                <ul>
+                    <li>Как быстро приходит ответ? — Обычно в течение суток.</li>
+                    <li>Можно ли предложить идеи для сайта? — Да.</li>
+                    <li>Можно ли связаться через соцсети? — Да.</li>
+                </ul>
+
+                <h3>Инструкция по связи</h3>
+
+                <p>
+                    Заполните форму обратной связи или используйте
+                    социальные сети и электронную почту.
+                </p>
+            </div>
+        </div>
+
+        <div>
+            <div class="contact-form">
+                <h2>Форма обратной связи</h2>
+
+                <form>
+                    <div class="form-group">
+                        <label class="required-label">
+                            Имя
+                        </label>
+
+                        <input 
+                            type="text"
+                            placeholder="Введите имя"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="required-label">
+                            Email
+                        </label>
+
+                        <input 
+                            type="email"
+                            placeholder="Введите email"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            Тема сообщения
+                        </label>
+
+                        <select>
+                            <option>Вопрос</option>
+                            <option>Предложение</option>
+                            <option>Техническая проблема</option>
+                            <option>Другое</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="required-label">
+                            Сообщение
+                        </label>
+
+                        <textarea
+                            rows="6"
+                            placeholder="Введите сообщение"
+                            required></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-container">
+                        <input 
+                            type="checkbox"
+                            required>
+
+                        <label>
+                            Согласен на обработку персональных данных
+                        </label>
+                    </div>
+
+                    <button type="submit">
+                        Отправить сообщение
+                    </button>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <p>© Александр Алиев, студент 1 курса, 2026. Все права защищены.</p>
+</footer>
+
+</body>
+</html>
